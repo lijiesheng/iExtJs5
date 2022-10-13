@@ -36,11 +36,11 @@ Ext.define("App.view.login.LoginController", {
 					var respText = Ext.util.JSON.decode(action.response.responseText)
 					console.log("respText==>", respText)
 					if (respText.success == true) {
+						// 用户名 存如cookie
+						Ext.util.Cookies.set('username',username);
+
 						view.destroy();
 						Ext.create("App.view.main.Main");    // 跳转页面
-
-						// 用户名存在 cookie 中
-						// location.href = 'index.html';
 					} else {
 						Ext.Msg.alert('消息', respText.msg);
 					}

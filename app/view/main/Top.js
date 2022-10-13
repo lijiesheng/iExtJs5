@@ -22,7 +22,7 @@ Ext.define("App.view.main.Top", {
 				cls: "top-tool",
 				items: [{
 					xtype: "label",
-					html: "<i class='icon-user'></i> 欢迎您，Neo"
+					html: "<i class='icon-user'></i> 欢迎您，" + Ext.util.Cookies.get("username")
 				}, {
 					xtype: "xbtn",
 					text: "退出",
