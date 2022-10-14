@@ -34,5 +34,6 @@ Ext.define("App.view.main.MainController", {
 	exitSys: function() {
 		this.getView().destroy();
 		Ext.create("App.view.login.Login");    // 创建登录页面
-	}
+	},
+
 });

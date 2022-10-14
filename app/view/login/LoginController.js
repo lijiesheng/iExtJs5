@@ -38,7 +38,6 @@ Ext.define("App.view.login.LoginController", {
 					if (respText.success == true) {
 						// 用户名 存如cookie
 						Ext.util.Cookies.set('username',username);
-
 						view.destroy();
 						Ext.create("App.view.main.Main");    // 跳转页面
 					} else {
@@ -50,6 +49,12 @@ Ext.define("App.view.login.LoginController", {
 				}
 			})
 		}
+	},
+
+	register_view : function () {
+		this.getView().destroy();
+		console.log("aaaaaa")
+		Ext.create("App.view.register.Register")
 	}
 });
 

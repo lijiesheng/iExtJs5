@@ -64,6 +64,9 @@ Ext.define("App.view.login.Login", {
 				buttons: [{
 					text: "登录",
 					handler: "onLogin"    // 调用的方法
+				}, {
+					text: "注册",
+					handler: "register_view"
 				}]
 			}]
 		});
