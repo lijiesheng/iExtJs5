@@ -53,7 +53,6 @@ Ext.define("App.view.login.LoginController", {
 
 	register_view : function () {
 		this.getView().destroy();
-		console.log("aaaaaa")
 		Ext.create("App.view.register.Register")
 	}
 });

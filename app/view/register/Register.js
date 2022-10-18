@@ -16,7 +16,7 @@ Ext.define("App.view.register.Register", {
                 xtype: "window",
                 title: "用户注册",
                 width: 400,
-                height: 330,
+                height: 360,
                 autoShow: true,
                 closable: false,
                 resizable: false,
@@ -42,28 +42,20 @@ Ext.define("App.view.register.Register", {
                         {
                             name : "r_username",
                             fieldLabel: "用户名",
-                            // bind: "{r_username}",
-                            // listeners: {
-                            //     specialKey: "onSpecialKey"
-                            // }
+                        },
+                        {
+                            name : 'r_email',
+                            fieldLabel: "邮箱",
                         },
                         {
                             name: "r_password",
                             inputType: "password",
                             fieldLabel: "密码",
-                            // bind: "{r_password}",
-                            // listeners: {
-                            //     specialKey: "onSpecialKey"
-                            // }
                         },
                         {
                             name: "con_password",
                             inputType: "password",
                             fieldLabel: "确认密码",
-                            // bind: "{con_password}",
-                            // listeners: {
-                            //     specialKey: "onSpecialKey"
-                            // }
                         }, {          // 一个提示信息
                             xtype: 'label',
                             name: 'msg_field',
