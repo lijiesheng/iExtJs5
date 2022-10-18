@@ -40,20 +40,20 @@ Ext.define("App.view.register.Register", {
                     },
                     items: [
                         {
-                            name : "r_username",
+                            name : "username",
                             fieldLabel: "用户名",
                         },
                         {
-                            name : 'r_email',
+                            name : 'email',
                             fieldLabel: "邮箱",
                         },
                         {
-                            name: "r_password",
+                            name: "password",
                             inputType: "password",
                             fieldLabel: "密码",
                         },
                         {
-                            name: "con_password",
+                            name: "conPassword",
                             inputType: "password",
                             fieldLabel: "确认密码",
                         }, {          // 一个提示信息

@@ -37,7 +37,7 @@ Ext.define("App.view.register.RegisterController", {
                 url : 'http://127.0.0.1:6111/r_register',
                 method : 'POST',
                 params : { // 此处可以添加额外参数
-                    extraParems : 'extraParems'
+                    // extraParems : 'extraParems'
                 },
                 success : function(form, action) {
                     var respText = Ext.util.JSON.decode(action.response.responseText)
