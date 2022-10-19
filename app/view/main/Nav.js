@@ -14,7 +14,8 @@ Ext.define("App.view.main.Nav", {
 			proxy: {
 				type: "ajax",
 				reader: "json",
-				url: "data/nav.json"
+				// url: "data/nav.json",
+				url : 'http://127.0.0.1:6111/get_nav?tok=' + Ext.util.Cookies.get("token"),
 			}
 			
 //			root: {
@@ -93,7 +94,7 @@ Ext.define("App.view.main.Nav", {
 			rootVisible: false,
 			store: navStore,
 			listeners: {
-				itemclick: "onMenuClick"
+				itemclick: "onMenuClick"    // handler 方法
 			}
 		});
 		this.callParent(arguments);

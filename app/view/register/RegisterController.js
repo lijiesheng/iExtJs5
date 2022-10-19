@@ -38,6 +38,7 @@ Ext.define("App.view.register.RegisterController", {
                 method : 'POST',
                 params : { // 此处可以添加额外参数
                     // extraParems : 'extraParems'
+                    // registerTime : new Date()
                 },
                 success : function(form, action) {
                     var respText = Ext.util.JSON.decode(action.response.responseText)

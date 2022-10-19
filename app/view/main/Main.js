@@ -12,8 +12,8 @@ Ext.define("App.view.main.Main", {
 	viewModel: {type: "main"},
 	controller: "main",
 	uses: [
-		"App.view.main.Top",
-		"App.view.main.Nav",
+		"App.view.main.Top",      // 欢迎您
+		"App.view.main.Nav",      // 导航条，可以根据权限返回响应的数据
 		"App.view.main.Content",
 		"App.view.main.Bottom"
 	],

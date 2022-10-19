@@ -30,7 +30,7 @@ Ext.define("App.view.login.LoginController", {
 				url : 'http://127.0.0.1:6111/r_login',
 				method : 'POST',
 				params : { // 此处可以添加额外参数
-					extraParems : 'extraParems'
+					// extraParems : 'extraParems'
 				},
 				success : function(form, action) {
 					var respText = Ext.util.JSON.decode(action.response.responseText)
@@ -38,6 +38,7 @@ Ext.define("App.view.login.LoginController", {
 					if (respText.success == true) {
 						// 用户名 存如cookie
 						Ext.util.Cookies.set('username',username);
+						Ext.util.Cookies.set('token',respText.token);
 						view.destroy();
 						Ext.create("App.view.main.Main");    // 跳转页面
 					} else {
@@ -45,7 +46,10 @@ Ext.define("App.view.login.LoginController", {
 					}
 				},
 				failure : function(form, action) {
-					Ext.Msg.alert("消息", "操作失败!");
+					var respText = Ext.util.JSON.decode(action.response.responseText)
+					console.log("失败 respText===>", respText)
+					fMsg.setText(respText.error);
+					// Ext.Msg.alert("消息", "操作失败!");
 				}
 			})
 		}

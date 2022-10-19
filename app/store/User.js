@@ -16,4 +16,5 @@ Ext.define("App.store.User", {
 			rootProperty: "data"
 		}
 	}
+
 });
